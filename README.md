@@ -41,3 +41,5 @@ sudo chmod +x scripts/connection_check.py
 ```
 sudo systemctl enable connection-check.service
 ```
+4. enable sudo no password ```sudo visudo``` and add line after group sudo ```${ubuntu} ALL=(ALL:ALL) NOPASSWD:ALL```
+5. add ```auth sufficient pam_permit.so``` line to ```/etc/pam.d/sudo``` file to fix error "pam_unit auth could not identify password for ..."
